@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cb8b54bcd9a34e69e8556fe616e16c4",
+    "content-hash": "c2c77acccff347708a549510e533b30d",
     "packages": [
         {
             "name": "brick/math",
@@ -1060,6 +1060,53 @@
                 }
             ],
             "time": "2026-08-24T17:13:02+00:00"
+        },
+        {
+            "name": "itmosoft/laravel-vendors",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ITMOSOFT/laravel-vendors.git",
+                "reference": "dfe9e010dfbeb9f0670127461beb53e70aae0a13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ITMOSOFT/laravel-vendors/zipball/dfe9e010dfbeb9f0670127461beb53e70aae0a13",
+                "reference": "dfe9e010dfbeb9f0670127461beb53e70aae0a13",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^12.0 || ^13.0",
+                "illuminate/support": "^12.0 || ^13.0",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^10.0 || ^11.0",
+                "phpunit/phpunit": "^11.0 || ^12.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ItmoSoft\\Vendors\\VendorsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ItmoSoft\\Vendors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Vendor profiles, ownership, onboarding status, and moderation for Laravel marketplace applications.",
+            "support": {
+                "issues": "https://github.com/ITMOSOFT/laravel-vendors/issues",
+                "source": "https://github.com/ITMOSOFT/laravel-vendors/tree/v1.0.0"
+            },
+            "time": "2026-11-14T15:53:58+00:00"
         },
         {
             "name": "laravel/framework",

@@ -2,9 +2,9 @@
 
 namespace ItmoSoft\VendorProducts\Tests;
 
-use ItmoSoft\VendorProducts\VendorProductManager;
 use ItmoSoft\VendorProducts\Tests\Models\Product;
-use ItmoSoft\VendorProducts\Tests\Models\Vendor;
+use ItmoSoft\VendorProducts\VendorProductManager;
+use ItmoSoft\Vendors\Models\Vendor;
 
 class VendorProductManagerTest extends TestCase
 {

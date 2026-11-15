@@ -2,10 +2,8 @@
 
 namespace ItmoSoft\VendorProducts\Tests\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use ItmoSoft\Vendors\Models\Vendor as BaseVendor;
 
-class Vendor extends Model
+class Vendor extends BaseVendor
 {
-    protected $table = 'vendors';
-    protected $guarded = [];
 }
