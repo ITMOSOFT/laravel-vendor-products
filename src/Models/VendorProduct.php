@@ -3,8 +3,8 @@
 namespace ItmoSoft\VendorProducts\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use ItmoSoft\Vendors\Models\Vendor;
 
 class VendorProduct extends Model
 {
@@ -19,9 +19,9 @@ class VendorProduct extends Model
         return config('itmosoft-vendor-products.table_prefix', 'itmosoft_').'vendor_products';
     }
 
-    public function vendor(): BelongsTo
+    public function vendor()
     {
-        return $this->belongsTo(config('itmosoft-vendor-products.vendor_model', \ItmoSoft\Vendors\Models\Vendor::class), 'vendor_id');
+        return $this->belongsTo(Vendor::class);
     }
 
     public function product(): MorphTo
