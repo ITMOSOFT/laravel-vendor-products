@@ -21,7 +21,6 @@ abstract class TestCase extends Orchestra
     protected function defineEnvironment($app): void
     {
         $app['config']->set('database.default', 'testing');
-
         $app['config']->set('database.connections.testing', [
             'driver' => 'sqlite',
             'database' => ':memory:',
@@ -34,14 +33,7 @@ abstract class TestCase extends Orchestra
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(
-            dirname(__DIR__, 2).'/../laravel-vendors/database/migrations'
-        );
-
-        $this->loadMigrationsFrom(
-            dirname(__DIR__).'/database/migrations'
-        );
-
+        // Both package service providers register their own migrations.
         $this->artisan('migrate')->run();
 
         Schema::create('test_owners', function (Blueprint $table) {
